@@ -24,6 +24,8 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^7.1"
+    "php": "^7.1",
+    "respect/validation": "^1.1",
+    "guzzlehttp/guzzle": "^6.3"
   }
 }
