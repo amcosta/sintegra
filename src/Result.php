@@ -2,7 +2,7 @@
 
 namespace Sintegra;
 
-class Result implements ResultInterface
+class Result implements ResultInterface, \JsonSerializable
 {
     /**
      * @var string
@@ -14,89 +14,126 @@ class Result implements ResultInterface
         $this->source = $html;
     }
 
-    public function getRazaoSocial(): string
+    public function getRazaoSocial(): ?string
     {
-        // TODO: Implement getRazaoSocial() method.
+        return $this->filter(2);
     }
 
-    public function getIdentificacao(): string
+    public function getIdentificacao(): ?string
     {
         // TODO: Implement getIdentificacao() method.
     }
 
-    public function getCNPJ(): string
+    public function getCNPJ(): ?string
     {
-        // TODO: Implement getCNPJ() method.
+        return $this->filter(0);
     }
 
-    public function getIE(): string
+    public function getIE(): ?string
     {
-        // TODO: Implement getIE() method.
+        return $this->filter(1);
     }
 
-    public function getLogradouro(): string
+    public function getLogradouro(): ?string
     {
-        // TODO: Implement getLogradouro() method.
+        return $this->filter(3);
     }
 
-    public function getBairro(): string
+    public function getBairro(): ?string
     {
-        // TODO: Implement getBairro() method.
+        return $this->filter(6);
     }
 
-    public function getNumero(): string
+    public function getNumero(): ?string
     {
-        // TODO: Implement getNumero() method.
+        return $this->filter(4);
     }
 
-    public function getMunicipio(): string
+    public function getMunicipio(): ?string
     {
-        // TODO: Implement getMunicipio() method.
+        return $this->filter(7);
     }
 
-    public function getComplemento(): string
+    public function getComplemento(): ?string
     {
-        // TODO: Implement getComplemento() method.
+        return $this->filter(5);
     }
 
-    public function getUF(): string
+    public function getUF(): ?string
     {
-        // TODO: Implement getUF() method.
+        return $this->filter(8);
     }
 
-    public function getTelefone(): string
+    public function getTelefone(): ?string
     {
-        // TODO: Implement getTelefone() method.
+        return $this->filter(10);
     }
 
-    public function getCEP(): string
+    public function getCEP(): ?string
     {
-        // TODO: Implement getCEP() method.
+        return $this->filter(9);
     }
 
-    public function getAtividadeEconomica(): string
+    public function getAtividadeEconomica(): ?string
     {
-        // TODO: Implement getAtividadeEconomica() method.
+        return $this->filter(11);
     }
 
-    public function getDataInicioAtividade(): string
+    public function getDataInicioAtividade(): ?string
     {
-        // TODO: Implement getDataInicioAtividade() method.
+        return $this->filter(12);
     }
 
-    public function getSituacaoCadastralVigente(): string
+    public function getSituacaoCadastralVigente(): ?string
     {
-        // TODO: Implement getSituacaoCadastralVigente() method.
+        return $this->filter(13);
     }
 
-    public function getDataSituacaoCadastral(): string
+    public function getDataSituacaoCadastral(): ?string
     {
-        // TODO: Implement getDataSituacaoCadastral() method.
+        return $this->filter(14);
     }
 
-    public function getRegimeDeApuracao(): string
+    public function getRegimeDeApuracao(): ?string
     {
-        // TODO: Implement getRegimeDeApuracao() method.
+        return $this->filter(15);
     }
 
+    public function jsonSerialize()
+    {
+        return [
+            'cnpj' => $this->getCNPJ(),
+            'ie' => $this->getIE(),
+            'razaoSocial' => $this->getRazaoSocial(),
+            'logradouro' => $this->getLogradouro(),
+            'numero' => $this->getNumero(),
+            'complemento' => $this->getComplemento(),
+            'bairro' => $this->getBairro(),
+            'municipio' => $this->getMunicipio(),
+            'uf' => $this->getUF(),
+            'cep' => $this->getCEP(),
+            'telefone' => $this->getTelefone(),
+            'atividadeEconomica' => $this->getAtividadeEconomica(),
+            'dataDeInicioDeAtividade' => $this->getDataInicioAtividade(),
+            'situacaoCadastralVigente' => $this->getSituacaoCadastralVigente(),
+            'dataSituacaoCadastralVigente' => $this->getDataSituacaoCadastral(),
+            'regimeDeApuracao' => $this->getRegimeDeApuracao()
+        ];
+    }
+
+
+    /**
+     * @param int $index
+     * @return null|string
+     */
+    private function filter($index = null): ?string
+    {
+        preg_match_all('/<td .*class="valor".*>(.*)<\/td>/', $this->source, $matches);
+
+        if (is_null($index) || !isset($matches[1][$index])) {
+            return null;
+        }
+
+        return trim(str_replace('&nbsp;', '', $matches[1][$index]));
+    }
 }
