@@ -22,20 +22,17 @@ class Client
             throw new \InvalidArgumentException(sprintf('O CNPJ informado "%s" não é valido', $cnpj));
         }
 
-        return $this->makeRequest($cnpj);
+        return $this->makeRequest(['num_cnpj' => $cnpj]);
     }
 
-    private function makeRequest(string $cnpj): ResultInterface
+    private function makeRequest(array $params): ResultInterface
     {
+        $params['botao'] = 'Consultar';
+
         $response = $this->client->request(
             'POST',
             'http://www.sintegra.es.gov.br/resultado.php',
-            [
-                'form_params' => [
-                    'num_cnpj' => $cnpj,
-                    'botao' => 'Consultar'
-                ]
-            ]
+            ['form_params' => $params]
         );
 
         return new Result($response->getBody());
