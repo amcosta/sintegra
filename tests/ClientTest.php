@@ -4,6 +4,7 @@ namespace Sintegra\Test;
 
 use PHPUnit\Framework\TestCase;
 use Sintegra\Client;
+use Sintegra\ResultInterface;
 
 class ClientTest extends TestCase
 {
@@ -24,9 +25,9 @@ class ClientTest extends TestCase
 
     public function testValidCNPJ()
     {
-        $this->assertEmpty($this->client->searchByCNPJ(31804115000243));
-        $this->assertEmpty($this->client->searchByCNPJ('31804115000243'));
-        $this->assertEmpty($this->client->searchByCNPJ('31.804.115-0002-43'));
+        $this->assertInstanceOf(ResultInterface::class, $this->client->searchByCNPJ(31804115000243));
+        $this->assertInstanceOf(ResultInterface::class, $this->client->searchByCNPJ('31804115000243'));
+        $this->assertInstanceOf(ResultInterface::class, $this->client->searchByCNPJ('31.804.115-0002-43'));
     }
 
     /**
@@ -34,6 +35,6 @@ class ClientTest extends TestCase
      */
     public function testInvalidCNPJ()
     {
-        $this->assertEmpty($this->client->searchByCNPJ('invalid'));
+        $this->assertInstanceOf(ResultInterface::class, $this->client->searchByCNPJ('invalid'));
     }
 }

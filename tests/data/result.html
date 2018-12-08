@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta name="description" content="Consulta ao Sintegra da Secretaria de Estado da Fazenda do Espírito Santo"/>
+    <meta name="keywords"
+          content="sintegra, consulta, publica, cadastro, icms, es, sintegra-es, gov, espirito santo, br"/>
+    <title>Resultado da Consulta ao Sintegra</title>
+    <script type="text/javascript">var a = window;
+    a.dT_ ? a.console && a.console.log("Duplicate agent injection detected, turning off redundant initConfig.") : navigator.userAgent && 0 <= navigator.userAgent.indexOf("RuxitSynthetic") || window.dT_ || (window.dT_ = {cfg: "async=1|bandwidth=300|lastModification=1513699917762|tp=500,50,0,1|xmut=1|reportUrl=dynaTraceMonitor|agentUri=/dtagent_Ab_7000000131014.js|auto=1|domain=es.gov.br|rid=RID_-1284068777|rpid=605639692|app=Default Application"});
+    (function () {
+        function A() {
+            var a = 0;
+            try {
+                a = L.performance.timing.navigationStart + Math.floor(L.performance.now())
+            } catch (b) {
+            }
+            return 0 >= a || isNaN(a) ? (new Date).getTime() : a
+        }
+
+        function n(a, b) {
+            for (var c = 1; c < arguments.length; c++) a.push(arguments[c])
+        }
+
+        function M(a) {
+            n(N, a)
+        }
+
+        function p(a, b) {
+            return parseInt(a, b || 10)
+        }
+
+        function h(a, b) {
+            var c = -1;
+            b && a && a.indexOf && (c = a.indexOf(b));
+            return c
+        }
+
+        function O(a) {
+            document.cookie = a + '="";path=/' + (e.domain ? ";domain=" + e.domain : "") + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+        }
+
+        function P(a) {
+            a =
+                encodeURIComponent(a);
+            var b = [];
+            if (a) for (var c = 0; c < a.length; c++) {
+                var f = a.charAt(c);
+                n(b, la[f] || f)
+            }
+            return b.join("")
+        }
+
+        function B(a, b, c, f) {
+            b || 0 == b ? (b = ("" + b).replace(/[;\n\r]/g, "_"), b = "DTSA" === a.toUpperCase() ? P(b) : b, a = a + "=" + b + ";path=/" + (e.domain ? ";domain=" + e.domain : ""), c && (a += ";expires=" + c.toUTCString()), f && (a += ";Secure"), document.cookie = a) : O(a)
+        }
+
+        function u(a) {
+            var b, c, f, d = document.cookie.split(";");
+            for (b = 0; b < d.length; b++) if (c = h(d[b], "="), f = d[b].substring(0, c), c = d[b].substring(c + 1), f = f.replace(/^\s+|\s+$/g,
+                ""), f === a) return "DTSA" === a.toUpperCase() ? decodeURIComponent(c) : c;
+            return ""
+        }
+
+        function R(a) {
+            return /^[0-9A-Za-z_\$\+\/\.\-\*%\|]*$/.test(a)
+        }
+
+        function C() {
+            var a = u(v);
+            return a && R(a) ? a : ""
+        }
+
+        function S(a) {
+            B(v, a, void 0, d.bcv("ssc"))
+        }
+
+        function T(a) {
+            a = a || C();
+            var b = {sessionId: null, j: null};
+            if (a) {
+                var c = h(a, "|"), f = a;
+                -1 !== c && (f = a.substring(0, c));
+                c = h(f, "$");
+                -1 !== c ? (b.sessionId = f.substring(c + 1), b.j = f.substring(0, c)) : b.sessionId = f
+            }
+            return b
+        }
+
+        function U(a) {
+            return T(a).j
+        }
+
+        function V(a) {
+            if (a) return T(a).sessionId;
+            if (a = C()) {
+                var b =
+                    h(a, "|");
+                -1 != b && (a = a.substring(0, b))
+            }
+            return a
+        }
+
+        function D(a, b) {
+            return Math.floor(Math.random() * (b - a + 1)) + a
+        }
+
+        function W(a) {
+            var b = window.crypto || window.msCrypto, c;
+            if (b) c = new Int8Array(a), b.getRandomValues(c); else for (c = [], b = 0; b < a; b++) c.push(D(0, 32));
+            a = [];
+            for (b = 0; b < c.length; b++) {
+                var f = Math.abs(c[b] % 32);
+                a.push(String.fromCharCode(f + (9 >= f ? 48 : 55)))
+            }
+            return a.join("")
+        }
+
+        function X(a) {
+            return document.getElementsByTagName(a)
+        }
+
+        function Y(a) {
+            var b = a.length;
+            if ("number" === typeof b) a = b; else {
+                for (var b = 0, c = 2048; a[c - 1];) b =
+                    c, c += c;
+                for (var f = 7; 1 < c - b;) f = (c + b) / 2, a[f - 1] ? b = f : c = f;
+                a = a[f] ? c : b
+            }
+            return a
+        }
+
+        function Z(a) {
+            var b = {};
+            a = a.split("|");
+            for (var c = 0; c < a.length; c++) {
+                var f = a[c].split("=");
+                2 == f.length && (b[f[0]] = decodeURIComponent(f[1].replace(/\+/g, " ")))
+            }
+            return b
+        }
+
+        function r(a, b, c) {
+            b = b || {};
+            a = a.split("|");
+            for (var f = 0; f < a.length; f++) {
+                var d = h(a[f], "="), e;
+                -1 === d ? (e = a[f], b[e] = "1") : (e = a[f].substring(0, d), b[e] = a[f].substring(d + 1, a[f].length))
+            }
+            c || aa(b);
+            return b
+        }
+
+        function E(a) {
+            return a in e ? e[a] : F[a]
+        }
+
+        function ba(a) {
+            var b = location.hostname;
+            return b && a ? b == a || -1 !== b.indexOf("." + a, b.length - ("." + a).length) : !0
+        }
+
+        function G(a) {
+            e[a] = 0 > h(e[a], "#" + a.toUpperCase()) ? e[a] : ""
+        }
+
+        function ma(a, b) {
+            var c = {};
+            e.legacy = "1";
+            if (a) {
+                var d = /([a-zA-Z]*)[0-9]{0,4}_([a-zA-Z_0-9]*)_([0-9]+)/g.exec(a);
+                d && d.length && (c.csu = d[1], c.featureHash = d[2])
+            }
+            b && r(b, c, !0);
+            ba(c.domain) || (delete c.domain, c.domainOverride = location.hostname + "," + c.domain);
+            return c
+        }
+
+        function aa(a) {
+            var b = a.spc;
+            if (b) {
+                var c = document.createElement("textarea");
+                c.innerHTML = b;
+                a.spc = c.value
+            }
+        }
+
+        function ca(a) {
+            var b =
+                a.agentUri;
+            b && -1 < h(b, "_") && (b = /([a-zA-Z]*)[0-9]{0,4}_([a-zA-Z_0-9]*)_[0-9]+/g.exec(b), a.csu = b[1], a.featureHash = b[2])
+        }
+
+        function da(a) {
+            a.bp = a.bp || F.bp;
+            a.bp1 && (a.bp = 1);
+            a.bp2 && (a.bp = 2);
+            ba(e.domain) || (e.domainOverride = location.hostname + "," + e.domain, delete e.domain)
+        }
+
+        function w(a) {
+            var b = document.cookie ? document.cookie.split(a).length - 1 : 0;
+            if (1 < b) {
+                var c = e.domain || window.location.hostname, d = window.location.hostname,
+                    Q = window.location.pathname, h = 0, k = 0;
+                q.push(a);
+                do {
+                    var x = d.substr(h);
+                    if (x != c || "/" !== Q) {
+                        var g = a, m =
+                            x == c ? null : x, n = Q, l = 1, p = 0;
+                        do document.cookie = g + '=""' + (m ? ";domain=" + m : "") + ";path=" + n.substr(0, l) + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;", l = n.indexOf("/", l), p++; while (-1 != l && 5 > p);
+                        g = document.cookie ? document.cookie.split(a).length - 1 : 0;
+                        g < b && (q.push(x), b = g)
+                    }
+                    h = d.indexOf(".", h) + 1;
+                    k++
+                } while (0 != h && 10 > k && 1 < b)
+            }
+        }
+
+        function ea(a, b) {
+            for (var c = fa(b), d = !1, e = 0; e < c.length; e++) c[e].frameId === y && (c[e].b = a, d = !0);
+            d || n(c, {frameId: y, b: a});
+            ga(c)
+        }
+
+        function ga(a) {
+            var b = "";
+            if (a) {
+                for (var b = [], c = 0; c < a.length; c++) "-" != a[c].b && (0 <
+                c && 0 < b.length && n(b, "p"), n(b, a[c].frameId), n(b, "h"), n(b, a[c].b));
+                b = b.join("")
+            }
+            b || (b = "-");
+            B("dtPC", b)
+        }
+
+        function fa(a) {
+            var b = u("dtPC"), c = [];
+            if (b && "-" !== b) for (var b = b.split("p"), d = 0; d < b.length; d++) {
+                var e = b[d].split("h");
+                if (2 === e.length && e[0] && e[1]) {
+                    var h = e[0], g;
+                    if (!(g = a)) {
+                        g = p(h.split("_")[0]);
+                        var k = A() % 6E8;
+                        k < g && (k += 6E8);
+                        g = g + 9E5 > k
+                    }
+                    g && n(c, {frameId: h, b: e[1]})
+                }
+            }
+            return c
+        }
+
+        function na(a, b) {
+            var c = document.createElement("script");
+            c.setAttribute("src", a);
+            b && c.setAttribute("defer", "true");
+            c.setAttribute("crossorigin",
+                "anonymous");
+            var d = document.getElementsByTagName("script")[0];
+            d.parentElement.insertBefore(c, d)
+        }
+
+        function oa() {
+            if (document.currentScript) {
+                var a = document.currentScript.src;
+                if (a) for (var b = -1 == h(a, "_bs") && -1 == h(a, "_bootstrap") && -1 == h(a, "_complete") ? 1 : 2, c = a.lastIndexOf("/"), d = 0; d < b && -1 != c; d++) a = a.substr(0, c), c = a.lastIndexOf("/");
+                return a
+            }
+            return null
+        }
+
+        var l = window;
+        if (!l.dT_ || !l.dT_.cfg || "string" != typeof l.dT_.cfg || l.dT_.initialized) l.console && l.console.log("Initconfig not found or agent already initialized! This is an injection issue.");
+        else if (!(navigator.userAgent && 0 <= navigator.userAgent.indexOf("RuxitSynthetic"))) {
+            var pa = window.setTimeout, H = window.sessionStorage,
+                d = {version: "10127171124090849", cfg: window.dT_ && window.dT_.cfg, ica: 1};
+            window.dT_ = d;
+            var L = window, N = [];
+            d.agentStartTime = A();
+            d.nw = A;
+            d.apush = n;
+            d.st = function (a, b) {
+                return pa(a, b)
+            };
+            d.aBPSL = M;
+            d.gBPSL = function () {
+                return N
+            };
+            d.buildType = "appmon";
+            var la = {
+                "!": "%21",
+                "~": "%7E",
+                "*": "%2A",
+                "(": "%28",
+                ")": "%29",
+                "'": "%27",
+                $: "%24",
+                ";": "%3B",
+                ",": "%2C"
+            };
+            d.gSSV = function (a) {
+                try {
+                    if (H) return H[a]
+                } catch (b) {
+                }
+                return null
+            };
+            d.sSSV = function (a, b) {
+                try {
+                    window.sessionStorage.setItem(a, b)
+                } catch (c) {
+                }
+            };
+            d.pn = p;
+            d.iVSC = R;
+            d.io = h;
+            d.dC = O;
+            d.sC = B;
+            d.esc = P;
+            d.gSId = U;
+            d.gDtc = V;
+            d.gSC = C;
+            d.sSC = S;
+            d.gC = u;
+            d.cRN = D;
+            d.cRS = W;
+            d.gEL = Y;
+            d.gEBTN = X;
+            var F = {
+                ade: "",
+                app: "",
+                bandwidth: "300",
+                bp1: !1,
+                bp2: !1,
+                bp: 2,
+                bs: !1,
+                cors: !1,
+                csu: "",
+                cux: !1,
+                disableCookieManager: !1,
+                disableLogging: !1,
+                disableXhrFailures: !1,
+                domain: "",
+                domainOverride: "",
+                doNotDetect: "",
+                dsndb: !1,
+                dsss: !1,
+                euf: !1,
+                evl: "",
+                extblacklist: "",
+                exteventsoff: !1,
+                fa: !1,
+                featureHash: "",
+                ffi: !1,
+                hvt: 216E5,
+                imm: !1,
+                ign: "",
+                instr: "",
+                lab: !1,
+                legacy: !1,
+                lmut: !0,
+                lzwd: !1,
+                md: "",
+                mdn: 5E3,
+                mepp: 10,
+                moa: 30,
+                mrt: 3,
+                msl: 3E4,
+                ncw: !1,
+                ntd: !1,
+                oat: 180,
+                pui: !1,
+                reportUrl: "",
+                rid: "",
+                ridPath: "",
+                rpid: "",
+                rt: 0,
+                rtl: 100,
+                rtp: 1,
+                rtt: 1E3,
+                rtu: 200,
+                sl: 100,
+                sosi: !1,
+                spc: "",
+                spl: !1,
+                ssc: !1,
+                st: 3E3,
+                svNB: !1,
+                tp: "500,50,3",
+                tvc: 3E3,
+                uam: !1,
+                WST: !1,
+                xb: "",
+                xbp: null,
+                xmut: !0,
+                xt: 0
+            }, e = {reportUrl: "dynaTraceMonitor", initializedModules: "", csu: "dtagent", dataDtConfig: d.cfg}, I;
+            try {
+                I = window.localStorage
+            } catch (a) {
+            }
+            (function () {
+                var a = e.dataDtConfig;
+                "string" == typeof a && -1 == h(a, "#CONFIGSTRING") && (r(a,
+                    e), G("domain"), G("auto"), G("app"), ca(e))
+            })();
+            var l = X("script"), ha = Y(l), m, k;
+            if (0 < ha) for (var g, ia = e.csu + "_bootstrap.js", J = 0; J < ha; J++) if (g = l[J], g.attributes) {
+                var ja = g.attributes.getNamedItem("data-dtconfig"), z = g.src;
+                if (ja) if (k = ma(g.src, ja.value), !m) m = k; else if ("1" != k.syntheticConfig) {
+                    m = k;
+                    break
+                }
+                (g = z && z.indexOf(ia)) && 0 <= g && (g = g + ia.length + 5, k || (k = e), k.app = z.length > g ? z.substr(g) : "Default%20Application")
+            }
+            if (m) for (var K in m) m.hasOwnProperty(K) && (e[K] = m[K]);
+            e.rx_visitID && (d.rx_visitID = e.rx_visitID);
+            (function () {
+                var a =
+                        e.csu,
+                    a = (a.indexOf("dbg") == a.length - 3 ? a.substr(0, a.length - 3) : a) + "_" + e.app + "_Store";
+                try {
+                    var b = I && I.getItem(a);
+                    if (b) {
+                        var c = Z(b), d = r(c.config, c).lastModification || "", g = e.lastModification || "",
+                            h = p(d.substr(0, 13)), k = p(g.substr(0, 13));
+                        if (!g || h >= k) for (var l in c) c.hasOwnProperty(l) && ("config" == l ? r(c[l], e) : e[l] = c[l])
+                    }
+                } catch (ra) {
+                }
+            })();
+            da(e);
+            try {
+                var ka = e.ign;
+                if (ka && (new RegExp(ka)).test(window.location.href)) {
+                    document.dT_ = window.dT_ = null;
+                    return
+                }
+            } catch (a) {
+            }
+            var v = "dtCookie";
+            d.gSCN = function () {
+                return v
+            };
+            d.gPCHN =
+                function () {
+                    return "x-dtpc"
+                };
+            d.gRHN = function () {
+                return "x-dtreferer"
+            };
+            d.pageContextCookieName = "dtPC";
+            d.latencyCookieName = "dtLatC";
+            d.mobileSessionIDCookieName = "dtAdk";
+            d.cfg = e;
+            d.pCfg = Z;
+            d.pCSAA = r;
+            d.cFHFAU = ca;
+            d.sCD = da;
+            d.hDSC = aa;
+            d.bcv = function (a) {
+                a = E(a);
+                return "false" === a || "0" === a ? !1 : !!a
+            };
+            d.ncv = function (a) {
+                var b = p(E(a));
+                isNaN(b) && (b = p(F[a]));
+                return b
+            };
+            d.scv = function (a) {
+                return String(E(a))
+            };
+            d.stcv = function (a, b) {
+                e[a] = b
+            };
+            d.rplC = function (a) {
+                return e = a
+            };
+            var q = [];
+            w("dtPC");
+            w(v);
+            w("dtLatC");
+            w("rxvt");
+            M(function (a,
+                        b) {
+                0 < q.length && !b && (a.a("dCN", "duplicateCookieNames", function () {
+                    return q.join(",")
+                }, function () {
+                    return q.slice()
+                }), q = [])
+            });
+            var y = d.agentStartTime % 6E8 + "_" + p(D(0, 1E3));
+            d.gFId = function () {
+                return y
+            };
+            d.frameId = y;
+            ea(1);
+            d.gPC = fa;
+            d.cPC = ea;
+            d.sPC = ga;
+            var t;
+            try {
+                t = H.getItem("dtDisabled")
+            } catch (a) {
+            }
+            (m = e.agentLocation) || (m = oa());
+            k = e.agentname || e.csu || "dtagent";
+            k = u("dtUseDebugAgent") ? e.debugName || k + "dbg" : e.name || k;
+            e.auto || e.legacy || t || (t = e.agentUri || m + "/" + k + "_" + e.featureHash + "_" + (e.buildNumber || d.version) + ".js", e.async ?
+                na(t, e.async) : document.write('<script type="text/javascript" src="' + t + '">\x3c/script>'));
+            V() || S("" + W(32));
+            var qa = U();
+            d.gcSId = function () {
+                return qa
+            }
+        }
+    })();</script>
+    <script type="text/javascript" src="/dtagent_Ab_7000000131014.js" defer="defer"></script>
+    <link href="/css/estilo.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script type="text/javascript" src="/js/ajax/prototype.js"></script>
+    <script type="text/javascript" src="/js/ajax/scriptaculous.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body>
+<div id="site">
+    <div id="logo">
+        <ul>
+            <li><img src="imagens/sintegra.gif" alt="Sintegra"/></li>
+            <li class="titulo"><br/>SINTEGRA/ICMS <br/><br/> Consulta Pública ao Cadastro <br/><br/> Estado do Espírito
+                Santo
+            </li>
+            <li><img src="imagens/brasao.gif" alt=""/></li>
+        </ul>
+    </div>
+    <div id="conteudo">
+
+        <table border="0" class="resultado">
+            <tr>
+                <td class="cadastro">Cadastro atualizado até: 08/12/2018</td>
+            </tr>
+            <tr>
+                <td>
+
+                    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td class="secao" colspan="4">
+                                IDENTIFICAÇÃO - PESSOA JURÍDICA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;CNPJ:</td>
+                            <td class="valor" width="30%">&nbsp;31.804.115/0002-43</td>
+                            <td class="titulo" width="25%" align="center">Inscrição Estadual:</td>
+                            <td class="valor">&nbsp;082.254.28-1</td>
+                        </tr>
+                        <tr>
+                            <td width="20%" class="titulo">&nbsp;Razão Social :</td>
+                            <td class="valor" colspan="3">&nbsp;CEREAIS DO NICO LTDA</td>
+                        </tr>
+                    </table>
+
+                    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td class="secao" colspan="4">
+                                ENDEREÇO
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;Logradouro:</td>
+                            <td class="valor" colspan="3">&nbsp;RUA IPE</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;Número:</td>
+                            <td class="valor" width="15%">&nbsp;10</td>
+                            <td class="titulo" width="20%">&nbsp;Complemento:</td>
+                            <td class="valor">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;Bairro:</td>
+                            <td class="valor" colspan="3">&nbsp;MOVELAR</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;Município:</td>
+                            <td class="valor" width="15%">&nbsp;LINHARES</td>
+                            <td class="titulo">&nbsp;UF:</td>
+                            <td class="valor">&nbsp;ES</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="20%">&nbsp;CEP:</td>
+                            <td width="30%" class="valor">&nbsp;29906-120</td>
+                            <td width="20%" class="titulo">&nbsp;Telefone:</td>
+                            <td width="30%" class="valor">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td class="secao">INFORMAÇÕES COMPLEMENTARES</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="40%" align="right">Atividade Econômica:&nbsp;</td>
+                            <td class="valor" width="60%">COMERCIO ATACADISTA DE CEREAIS E LEGUMINOSAS BENEFICIADAS</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="40%" align="right">Data de Inicio de Atividade:&nbsp;</td>
+                            <td class="valor">26/03/2004</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="40%" align="right">Situação Cadastral Vigente:&nbsp;</td>
+                            <td class="valor">HABILITADO</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo" width="40%" align="right">Data desta Situação Cadastral:&nbsp;</td>
+                            <td class="valor">26/03/2004</td>
+                        </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                            <td class="titulo" width="40%" align="right">Regime de Apura&ccedil;&atilde;o:&nbsp;</td>
+                            <td class="valor">ORDINARIO</td>
+                        </tr>
+                    </table>
+                    <!--			<table width="100%" border="0" cellspacing="1" cellpadding="1">-->
+                    <!--                            <tr>
+                            <td class="titulo" width="40%" align="right">Obrigatoriedade de EFD:&nbsp;</td>
+                            <td class="valor"> </td>
+                        </tr>-->
+                    <!--                            <tr>
+                            <td class="titulo" width="40%" align="right">Início de obrigatoriedade de EFD:&nbsp;</td>
+                            <td class="valor"> </td>
+                        </tr>-->
+                    <!--			</table>-->
+                    <!--                        <table width="100%" border="0" cellspacing="1" cellpadding="1">
+            <tr>-->
+                    <!--					<td class="titulo" width="40%" align="right">Início de voluntariedade de NFe:&nbsp;</td>-->
+                    <!--<td class="titulo" width="40%" align="right">Emitente de NFe desde:&nbsp;</td>
+<td class="valor">31/08/2009</td>
+</tr>
+</table>-->
+                    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                            <td colspan="2" class="observacao" style="font-size: 11px; line-height: 14px;">
+                                <br>
+
+                                A Inscrição Estadual (IE) com situação cadastral vigente <strong>HABILITADO</strong>
+                                indica que a empresa está <strong>APTA</strong> a realizar operações como contribuinte
+                                do ICMS. <br><br>
+
+                                Já a IE com situação cadastral <strong>NÃO HABILITADA</strong> indica que a empresa
+                                <strong>NÃO</strong> está <strong>APTA</strong> a realizar operações como contribuinte
+                                do ICMS, <u>caso mantenha entre as suas atividades pelo menos um CNAE cuja inscrição
+                                estadual seja obrigatória</u>. Caso a empresa não pertença a um CNAE cuja inscrição seja
+                                obrigatória e o CNPJ esteja ATIVO (consultar o site da Receita Federal do Brasil –
+                                http://www.receita.fazenda.gov.br), a empresa poderá ser destinatária de mercadorias,
+                                bens e serviços <strong><u>como CONSUMIDOR FINAL</u></strong>. Neste caso, <u>o número
+                                da Inscrição Estadual NÃO deverá constar em documentos que acobertem operações
+                                tributáveis pelo ICMS</u>.<br><br>
+
+                                A lista dos CNAEs obrigados à Inscrição Estadual está disponível no endereço: <a
+                                    href="ftp://ftp.sefaz.es.gov.br/CNAE-F/cnaes_obrigadas_a_inscricao.pdf">ftp://ftp.sefaz.es.gov.br/CNAE-F/cnaes_obrigadas_a_inscricao.pdf</a><br>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                            <td colspan="2" class="observacao">
+                                <strong>
+                                    OBSERVAÇÃO: Os dados acima são baseados em informações
+                                    fornecidas pelo contribuinte, estando sujeitos a posterior confirmação pelo Fisco.
+                                </strong>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                        <tr>
+                            <td class="valor" style="color:#FF0000;"><b>Data da Consulta:</b>&nbsp;<b>08/12/2018</b>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <table width="100%" border="0">
+                        <tr>
+                            <td align="center">
+                                <a href="index.php" class="voltar"><b>VOLTAR</b></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="rodape">
+    © Copyright 2003/2018 <b>Secretaria de Estado da Fazenda do Espírito Santo</b><br/>Av. João Batista Parra . nº600 .
+    Ed. Aureliano Hoffman . Enseada do Suá . Vitória-ES<br/>CEP: 29050-375 . CNPJ: 27.080.571/0001-30
+</div>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1283241-3");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+</body>
+</html>

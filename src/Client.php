@@ -16,7 +16,7 @@ class Client
         $this->client = new \GuzzleHttp\Client();
     }
 
-    public function searchByCNPJ(string $cnpj)
+    public function searchByCNPJ(string $cnpj): ResultInterface
     {
         if (!v::cnpj()->validate($cnpj)) {
             throw new \InvalidArgumentException(sprintf('O CNPJ informado "%s" não é valido', $cnpj));
@@ -25,8 +25,10 @@ class Client
         return $this->makeRequest();
     }
 
-    private function makeRequest()
+    private function makeRequest(): ResultInterface
     {
-//        $this->client->request('POST', 'http://www.sintegra.es.gov.br/resultado.php');
+        $response = $this->client->request('POST', 'http://www.sintegra.es.gov.br/resultado.php');
+
+        return new Result($response->getBody()->getContents());
     }
 }
